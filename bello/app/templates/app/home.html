@@ -1,0 +1,10 @@
+{%extends 'app/layout.html'%}
+{%load static%}
+{%block content%}
+<h2> 여기는 home! 지벵가고싶다 home! </h2>
+<form action="{%url 'form'%}">{% csrf_token %}
+    <textarea cols="40" rows="10" name="fulltext" method="post"></textarea>
+    <br>
+    <input type="submit" value="submit"/>
+</form>
+{%endblock%}
